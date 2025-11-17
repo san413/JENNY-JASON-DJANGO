@@ -1,65 +1,228 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Detail Page</title>
+    <meta charset="UTF-8">
+    <title>The Details</title>
+
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
+            font-family: 'Times New Roman', serif;
+            background: #f7f5ef;
         }
 
-        .container {
-            width: 70%;
-            margin: 40px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-        }
-
-        .main-img {
+        /* HERO SECTION */
+        .hero {
             width: 100%;
-            border-radius: 10px;
+            height: 420px;
+            background-image: url("{% static 'images/detail_full.png' %}");
+            background-size: cover;
+            background-position: top center;
+            position: relative;
         }
 
-        h1 {
-            margin-top: 20px;
+        .hero-title {
+            position: absolute;
+            bottom: 60px;
+            width: 100%;
+            text-align: center;
+            font-size: 26px;
+            letter-spacing: 4px;
+            color: white;
         }
 
-        p {
+        /* MAIN CONTENT SECTION */
+        .section-box {
+            width: 80%;
+            max-width: 850px;
+            margin: -70px auto 40px;
+            background: #b2ac9b;
+            padding: 40px 30px;
+            border-radius: 6px;
+            text-align: center;
+            color: white;
+            line-height: 1.7;
+        }
+
+        .rsvp-btn {
+            margin-top: 25px;
+            padding: 10px 50px;
+            font-size: 12px;
+            border-radius: 20px;
+            border: none;
+            background: #e5dece;
+            cursor: pointer;
+        }
+
+        .image-full {
+            width: 80%;
+            max-width: 850px;
+            margin: 40px auto;
+            border-radius: 6px;
+            display: block;
+        }
+
+        /* TWO COLUMN DETAILS */
+        .details-2col {
+            width: 80%;
+            max-width: 850px;
+            margin: 20px auto 40px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .col {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .travel-header {
+            margin: 80px auto 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+
+        /* RESPONSIVE THEME IMAGE */
+        .wide-image {
+            width: 100%;
+            height: 300px;
+            background-image: url("{% static 'images/detail_full.png' %}");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* REGISTRY SECTION */
+        .registry {
+            width: 100%;
+            height: 480px;
+            background-image: url("{% static 'images/detail_full.png' %}");
+            background-size: cover;
+            background-position: bottom center;
+            text-align: center;
+            padding-top: 140px;
+        }
+
+        .registry-title {
+            color: white;
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+
+        .registry-text {
+            width: 60%;
+            margin: 15px auto;
+            color: white;
+            font-size: 14px;
             line-height: 1.6;
         }
 
-        .back-btn {
-            display: inline-block;
+        .registry-btn {
             margin-top: 20px;
-            padding: 10px 16px;
-            background: #0094FF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            padding: 10px 45px;
+            border-radius: 25px;
+            border: none;
+            background: #e5dece;
+            cursor: pointer;
+            font-size: 12px;
         }
 
-        .back-btn:hover {
-            background: #0077cc;
+        footer {
+            text-align: center;
+            background: #efe8db;
+            padding: 40px 0;
+            font-size: 16px;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media screen and (max-width: 768px) {
+            .details-2col {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <img src="https://via.placeholder.com/1000x400" class="main-img">
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-title">THE DETAILS</div>
+    </div>
 
-    <h1>Detail Page Title</h1>
+    <!-- SECTION BOX -->
+    <div class="section-box">
+        We invite you to our wedding at Golden Elm Manor, an enchanting place where towering elms meet candlelit pathways.  
+        And where our next adventure begins.
+        <br><br>
+        <button class="rsvp-btn">RSVP</button>
+    </div>
 
-    <p>
-        This is the detail page content.  
-        You can describe your service, product, article, or anything you want here.
-    </p>
+    <!-- IMAGE (HOUSE) -->
+    <img src="{% static 'images/detail_full.png' %}" class="image-full">
 
-    <a href="/" class="back-btn">⬅ Go Back</a>
-</div>
+    <!-- DETAILS -->
+    <div class="details-2col">
+        <div class="col">
+            <b>Date:</b><br>
+            Saturday, September 20, 2025<br><br>
+            <b>Venue:</b><br>
+            The Golden Elm Manor, St. Augustine, NY<br><br>
+            <b>Ceremony Begins:</b><br>
+            4:30 PM<br><br>
+            <b>Reception:</b><br>
+            6:00 PM – Midnight
+        </div>
+
+        <div class="col">
+            <b>Musical Guest:</b><br>
+            The Starlight Quartet, followed by a surprise jazz ensemble.<br><br>
+            <b>Dinner:</b><br>
+            A seasonal farm-to-table menu featuring dishes inspired by our favorite travels.
+        </div>
+    </div>
+
+    <!-- TRAVEL SECTION -->
+    <div class="wide-image"></div>
+    <div class="travel-header">TRAVEL & STAY</div>
+
+    <!-- TRAVEL DETAILS -->
+    <div class="details-2col">
+        <div class="col">
+            Golden Elm Manor is a 90-minute train ride from Grand Central Station  
+            with direct routes to St. Augustine.  
+            Complimentary shuttles will be available from the station to the T.
+        </div>
+        <div class="col">
+            We’ve reserved charming accommodations at The Wildflower Inn — cozy & quaint,  
+            right in town.  
+            The Fox & Finch Manor — historic stay just minutes from the venue.
+        </div>
+    </div>
+
+    <!-- REGISTRY -->
+    <div class="registry">
+        <div class="registry-title">REGISTRY</div>
+        <div class="registry-text">
+            Your presence is the most cherished gift.  
+            Should you wish to contribute, we’ve created a honeymoon registry  
+            to help us embark on a memorable adventure to the Amalfi Coast.
+        </div>
+
+        <button class="registry-btn">GO TO REGISTRY</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        J & J <br>
+        SATURDAY, SEPTEMBER 20, 2025
+    </footer>
 
 </body>
 </html>
