@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jenny & Jason Wedding</title>
+    <style>
+        body { margin:0; font-family:'Times New Roman', serif; }
+        .hero { text-align:center; padding:60px 20px; background:#fff; }
+        .hero h1 { font-size:70px; letter-spacing:5px; }
+        .hero-sub { font-size:18px; margin-top:10px; }
+        
+        .section-image { width:100%; height:450px; object-fit:cover; opacity:0.9; }
+        
+        .grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:40px 0; background:#fff; }
+        .card { width:280px; height:380px; position:relative; }
+        .card img { width:100%; height:100%; object-fit:cover; border-radius:4px; }
+        .card span {
+            position:absolute; top:50%; left:50%;
+            transform:translate(-50%, -50%);
+            color:#fff; font-size:22px; letter-spacing:3px;
+        }
+        
+        .section { text-align:center; padding:50px 20px; background:#f8f1e9; }
+        .section h2 { font-size:24px; letter-spacing:3px; }
+        .section p { font-size:16px; width:60%; margin:auto; margin-top:10px; }
+        
+        .btn {
+            margin-top:20px; padding:12px 40px;
+            border-radius:40px; cursor:pointer;
+            border:none; font-size:14px;
+            background:#b5ab98; color:#fff;
+        }
+        
+        footer { text-align:center; padding:40px 0; background:#efe8db; font-size:18px; }
+    </style>
+</head>
+<body>
+
+    <!-- HERO HEADER -->
+    <div class="hero">
+        <h1>JENNY & JASON</h1>
+        <p class="hero-sub">Saturday, September 20, 2025 • St. Augustine, New York</p>
+    </div>
+
+    <!-- LARGE BACKGROUND IMAGE -->
+    <img src="https://via.placeholder.com/1600x800" class="section-image">
+
+    <!-- FOUR GRID SECTIONS -->
+    <div class="grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/400x500">
+            <span>OUR STORY</span>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x500">
+            <span>THE DETAILS</span>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x500">
+            <span>RSVP</span>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x500">
+            <span>REGISTRY</span>
+        </div>
+    </div>
+
+    <!-- REGISTRY SECTION -->
+    <div class="section">
+        <h2>REGISTRY</h2>
+        <p>
+            Your presence is the most cherished gift. Should you wish to contribute,
+            we've created a honeymoon registry to help us embark on a memorable 
+            adventure to the Amalfi Coast.
+        </p>
+        <button class="btn">GO TO REGISTRY</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        J & J <br>
+        SATURDAY, SEPTEMBER 20, 2025
+    </footer>
+
+</body>
+</html>
